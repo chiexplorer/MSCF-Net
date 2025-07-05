@@ -2,9 +2,193 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Hello Page</title>
+    <title>Demo Page</title>
+
+    <style>
+        .container {
+            background-color: #FBFBFC;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .row {
+            overflow: overlay;
+        }
+
+        .table {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 20px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            touch-action: manipulation;
+            cursor: pointer;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+
+        .icon {
+            vertical-align: baseline;
+            margin-right: 5px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                width: 750px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                width: 970px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                width: 1179px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <div class="container">
+        <div class="row">
+            <div class="text-center">
+                <h1>Multiscale Convolutional Fusion Network for Efficient Monaural Speech Separation</h1>
+                <h4>Rui Yang, Shanliang Pan</h4>
+                <h4>Faculty of Information Science and Engineering, Ningbo University, Ningbo 315211, China</h4>
+            </div>
+        </div>
+
+        <!-- GA figure -->
+        <div class="row">
+            <div style="padding-left: 15px; padding-right: 15px;">
+                <div style="width: 100%; float: left;"> 
+                    <img src="./demo/GA.jpg" style="margin-left: 20%; width: 60%" alt="">
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Abstract -->
+        <div class="row">
+            <h3>Abstract</h3>
+            <p>Speech separation is crucial for robust speech processing in real-world acoustic environments. To enable deployment in resource-limited scenarios, a speech separation system must balance separation performance, computational efficiency, and inference speed. In time-domain approaches, recurrent convolutional neural network (RCNN)-based models employ multiscale convolutional architectures to model the long sequences of encoded mixture signals. Compared to dual-path models, RCNN-based models offer higher computational efficiency but often struggle to achieve competitive performance. To address this limitation, we propose a multiscale convolutional fusion network (MSCF-Net), an efficient RCNN-based architecture designed to enhance the performance of lightweight speech separation models. The MSCF-Net follows the encoder-mask estimation-decoder pipeline, where the mask estimation process consists of parameter-shared multiscale convolutional fusion (MSCF) modules. MSCF first employs dynamic convolution-based downsampling to enhance the multiscale feature representation. Adaptive gating and multiscale convolutions are then utilized to capture complex acoustic patterns. Finally, cross-scale modulation upsampling efficiently reconstructs the acoustic features. Experiments on three datasets demonstrate that our method achieves state-of-the-art performance among lightweight speech separation models, with low computational complexity and fast inference. Specifically, MSCF-Net achieves 19.1 dB SI-SNRi on the WSJ0-2Mix test set with only 3.4 M parameters and 6.67 G/s multiply-accumulate operations (MACs) per second, and achieves 6 times real-time inference speed on the test CPU.</p>
+        </div>
+
+        <!-- links -->
+        <div class="row">
+            <h3>Links</h3>
+            <a href="#">
+                <button class="btn btn-primary" type="button">
+                    <img src="./demo/github2.png" class="icon" height="18px" alt=""><span style="display: inline-block; vertical-align: text-bottom;">Codes</span>
+                </button>
+            </a>
+        </div>
+
+        <!-- speech samples -->
+        <div class="row">
+            <h3>Speech Samples</h3>
+            <p>The model is evaluated with Libri2Mix</p>
+        </div>
+        <table class="table">
+            <thead>
+                <tr style="border-top: 1px solid black" class="text-center">
+                    <th style="width: 180px">Mixture input</th>
+                    <th style="width: 180px">model_1</th>
+                    <th style="width: 180px">model_2</th>
+                    <th style="width: 180px">model_3</th>
+                    <th style="width: 180px">model_4</th>
+                    <th style="width: 180px">model_5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-top: 1px solid black" class="text-center">
+                    <td scope="row" rowspan="2"><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                    <td><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                    <td><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                    <td><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                    <td><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                    <td><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                </tr>
+                <tr style="border-top: 1px solid black" class="text-center">
+                    <td><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                    <td><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                    <td><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                    <td><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                    <td><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                </tr>
+
+                <tr style="border-top: 1px solid black" class="text-center">
+                    <td scope="row" rowspan="2"><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                    <td><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                    <td><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                    <td><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                    <td><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                    <td><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                </tr>
+                <tr style="border-top: 1px solid black" class="text-center">
+                    <td><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                    <td><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                    <td><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                    <td><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                    <td><audio controls preload="metadata" style="width: 180px" src="./demo/res/1089-134686-0004_1284-1180-0027.wav"></audio></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <!-- References -->
+        <div class="row">
+            <h2>References</h2>
+            <div>
+                <p>
+                    <a name="1">[1]</a>
+
+                </p>
+                <p>
+                    <a name="2">[2]</a>
+                    
+                </p>
+                <p>
+                    <a name="3">[3]</a>
+                    
+                </p>
+                <p>
+                    <a name="4">[4]</a>
+                    
+                </p>
+                <p>
+                    <a name="5">[5]</a>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
